@@ -11,11 +11,10 @@ where
 --Q4 Which was the day with the largest trip distance Use the pick up time for your calculations.
 
 select
-	date(t.lpep_pickup_datetime) putime ,
-	max(t.trip_distance) maxdist
+	date(t.lpep_pickup_datetime) putime 
 from green_taxi_data t
 group by putime
-order by maxdist desc
+order by max(t.trip_distance) desc
 limit 1;
 
 --Q5 In 2019-01-01 how many trips had 2 and 3 passengers?
