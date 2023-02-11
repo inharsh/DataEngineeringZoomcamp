@@ -187,10 +187,10 @@ I've used Prefect Cloud to setup up notification e-mail
 Received the following email:
 
 ```
-Flow run etl-web-to-gcs/rapid-bonobo entered state `Completed` at 2023-02-08T23:03:13.054290+00:00.
-Flow ID: 5edb8a71-34e9-46a7-a505-540ecc84ac55
-Flow run ID: fec81607-0188-40ab-a9ce-a8245a1f08a6
-Flow run URL: https://app.prefect.cloud/account/cecdbbf0-5b0f-40a3-9b04-ab02393bf8b2/workspace/590c3c49-4407-4232-864e-e82faaa953b6/flow-runs/flow-run/2de069e1-71d5-4dcf-b037-4d3b0ee205c5
+Flow run etl-web-to-gcs/shiny-agouti entered state Completed at 2023-02-11T15:17:46.243086+00:00.
+Flow ID: 65fb853c-b381-46a6-9134-383d71100eb0
+Flow run ID: 71798824-9ef2-4dcf-ad66-f02ee56248bc
+Flow run URL: https://app.prefect.cloud/account/6a7751c2-465d-4416-b0ff-a30a9487bbbf/workspace/117eb31c-5c78-4999-b0e4-03e27108293a/flow-runs/flow-run/71798824-9ef2-4dcf-ad66-f02ee56248bc
 State message: All states completed.
 ```
 
