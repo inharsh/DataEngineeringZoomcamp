@@ -56,6 +56,28 @@ df \
 ```
 ### Question 4: 66.88 Hours
 
+Using dataFrame
+```
+from pyspark.sql.functions import to_date, col, desc, round as rnd
+```
+```
+df \
+    .withColumn('pickup_date', to_date('pickup_datetime')) \
+    .withColumn('time_diff', (col('dropoff_datetime').cast("double") - col('pickup_datetime').cast("double")) / 3600) \
+    .orderBy(desc('time_diff')) \
+    .select('pickup_date', rnd('time_diff', 2).alias("time_diff")) \
+    .show(1)
+
+[Stage 5:>                                                          (0 + 4) / 4]
++-----------+---------+
+|pickup_date|time_diff|
++-----------+---------+
+| 2021-06-25|    66.88|
++-----------+---------+
+only showing top 1 row
+```
+
+Using SQL
 ```
 df.registerTempTable('fhv_rides')
 
