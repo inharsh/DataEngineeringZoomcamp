@@ -63,7 +63,7 @@ from pyspark.sql.functions import to_date, col, desc, round as rnd
 ```
 df \
     .withColumn('pickup_date', to_date('pickup_datetime')) \
-    .withColumn('time_diff', (col('dropoff_datetime').cast("double") - col('pickup_datetime').cast("double")) / 3600) \
+    .withColumn('time_diff', (col('dropoff_datetime').cast("long") - col('pickup_datetime').cast("long")) / 3600) \
     .orderBy(desc('time_diff')) \
     .select('pickup_date', rnd('time_diff', 2).alias("time_diff")) \
     .show(1)
